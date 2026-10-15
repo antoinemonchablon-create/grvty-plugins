@@ -1,0 +1,221 @@
+=== Undertow 1.0.6 pour Windows (commit caaa8049cf532c8178b4971cff5fd6941c6f834f) ===
+-- Building for: Visual Studio 18 2026
+-- The C compiler identification is MSVC 19.51.36260.0
+-- The CXX compiler identification is MSVC 19.51.36260.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring juceaide
+-- Building juceaide
+-- Exporting juceaide
+-- Testing juceaide
+-- Finished setting up juceaide
+-- Configuring done (88.2s)
+-- Generating done (0.1s)
+-- Build files have been written to: D:/a/grvty-plugins/grvty-plugins/build-windows/Undertow
+MSBuild version 18.10.1-1.26427.6+3cd27c13e for .NET Framework
+
+  Checking File Globs
+  1>Checking Build System
+  Generating Undertow_artefacts/JuceLibraryCode/Undertow_resources.rc
+  Building Custom Rule D:/a/grvty-plugins/grvty-plugins/Undertow/CMakeLists.txt
+  Undertow_rc_lib.vcxproj -> D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow_rc_lib.dir\Release\Undertow_rc_lib.lib
+  Generating juce_binarydata_UndertowData/JuceLibraryCode/BinaryData1.cpp, juce_binarydata_UndertowData/JuceLibraryCode/BinaryData.h
+  Building Custom Rule D:/a/grvty-plugins/grvty-plugins/Undertow/CMakeLists.txt
+  BinaryData1.cpp
+  Building Custom Rule D:/a/grvty-plugins/grvty-plugins/Undertow/CMakeLists.txt
+  UndertowData.vcxproj -> D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Release\UndertowData.lib
+  Generating Undertow_artefacts/JuceLibraryCode/JuceHeader.h
+  Building Custom Rule D:/a/grvty-plugins/grvty-plugins/Undertow/CMakeLists.txt
+  juce_VST3ManifestHelper.cpp
+  PluginProcessor.cpp
+  PluginEditor.cpp
+  LiquidUI.cpp
+  PresetBar.cpp
+D:\a\grvty-plugins\grvty-plugins\Undertow\Source\ui\PresetBar.cpp(99,72): warning C4996: 'juce::Font::getStringWidthFloat': Use GlyphArrangement or TextLayout to compute text layouts [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+  Undertow_vst3_helper.vcxproj -> D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Release\Undertow_vst3_helper.exe
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244: 'initializing': conversion from '_Ty' to '_Ty2', possible loss of data [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:         with [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:         [ [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:             _Ty=int [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:         ] [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:         and [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:         [ [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:             _Ty2=float [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:         ] [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+  (compiling source file '../../Undertow/Source/ui/PresetBar.cpp')
+      C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54):
+      the template instantiation context (the oldest one first) is
+          D:\a\grvty-plugins\grvty-plugins\Undertow\Source\presets\FactoryPresets.h(59,37):
+          see reference to function template instantiation 'std::pair<const char *,float>::pair<const char(&)[10],int,0>(_Other1,_Other2 &&) noexcept' being compiled
+          with
+          [
+              _Other1=const char (&)[10],
+              _Other2=int
+          ]
+              D:\a\grvty-plugins\grvty-plugins\Undertow\Source\presets\FactoryPresets.h(54,5):
+              see the first reference to 'std::pair<const char *,float>::pair' in 'getFactoryPresetData'
+  
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244: 'initializing': conversion from '_Ty' to '_Ty2', possible loss of data [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:         with [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:         [ [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:             _Ty=int [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:         ] [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:         and [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:         [ [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:             _Ty2=float [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:         ] [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+  (compiling source file '../../Undertow/Source/PluginEditor.cpp')
+      C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54):
+      the template instantiation context (the oldest one first) is
+          D:\a\grvty-plugins\grvty-plugins\Undertow\Source\presets\FactoryPresets.h(59,37):
+          see reference to function template instantiation 'std::pair<const char *,float>::pair<const char(&)[10],int,0>(_Other1,_Other2 &&) noexcept' being compiled
+          with
+          [
+              _Other1=const char (&)[10],
+              _Other2=int
+          ]
+              D:\a\grvty-plugins\grvty-plugins\Undertow\Source\presets\FactoryPresets.h(54,5):
+              see the first reference to 'std::pair<const char *,float>::pair' in 'getFactoryPresetData'
+  
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244: 'initializing': conversion from '_Ty' to '_Ty2', possible loss of data [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:         with [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:         [ [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:             _Ty=int [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:         ] [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:         and [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:         [ [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:             _Ty2=float [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:         ] [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+  (compiling source file '../../Undertow/Source/PluginProcessor.cpp')
+      C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54):
+      the template instantiation context (the oldest one first) is
+          D:\a\grvty-plugins\grvty-plugins\Undertow\Source\presets\FactoryPresets.h(59,37):
+          see reference to function template instantiation 'std::pair<const char *,float>::pair<const char(&)[10],int,0>(_Other1,_Other2 &&) noexcept' being compiled
+          with
+          [
+              _Other1=const char (&)[10],
+              _Other2=int
+          ]
+              D:\a\grvty-plugins\grvty-plugins\Undertow\Source\presets\FactoryPresets.h(54,5):
+              see the first reference to 'std::pair<const char *,float>::pair' in 'getFactoryPresetData'
+  
+  FmScreen.cpp
+  SeqGrid.cpp
+  AboutPanel.cpp
+  juce_audio_processors.cpp
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244: 'initializing': conversion from '_Ty' to '_Ty2', possible loss of data [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:         with [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:         [ [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:             _Ty=int [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:         ] [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:         and [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:         [ [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:             _Ty2=float [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:         ] [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+  (compiling source file '../../Undertow/Source/ui/FmScreen.cpp')
+      C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54):
+      the template instantiation context (the oldest one first) is
+          D:\a\grvty-plugins\grvty-plugins\Undertow\Source\presets\FactoryPresets.h(59,37):
+          see reference to function template instantiation 'std::pair<const char *,float>::pair<const char(&)[10],int,0>(_Other1,_Other2 &&) noexcept' being compiled
+          with
+          [
+              _Other1=const char (&)[10],
+              _Other2=int
+          ]
+              D:\a\grvty-plugins\grvty-plugins\Undertow\Source\presets\FactoryPresets.h(54,5):
+              see the first reference to 'std::pair<const char *,float>::pair' in 'getFactoryPresetData'
+  
+  juce_gui_extra.cpp
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244: 'initializing': conversion from '_Ty' to '_Ty2', possible loss of data [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:         with [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:         [ [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:             _Ty=int [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:         ] [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:         and [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:         [ [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:             _Ty2=float [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4244:         ] [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+  (compiling source file '../../Undertow/Source/ui/SeqGrid.cpp')
+      C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(277,54):
+      the template instantiation context (the oldest one first) is
+          D:\a\grvty-plugins\grvty-plugins\Undertow\Source\presets\FactoryPresets.h(59,37):
+          see reference to function template instantiation 'std::pair<const char *,float>::pair<const char(&)[10],int,0>(_Other1,_Other2 &&) noexcept' being compiled
+          with
+          [
+              _Other1=const char (&)[10],
+              _Other2=int
+          ]
+              D:\a\grvty-plugins\grvty-plugins\Undertow\Source\presets\FactoryPresets.h(54,5):
+              see the first reference to 'std::pair<const char *,float>::pair' in 'getFactoryPresetData'
+  
+  juce_gui_basics.cpp
+  juce_graphics.cpp
+  juce_graphics_Harfbuzz.cpp
+D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\_deps\juce-src\modules\juce_gui_basics\juce_gui_basics.cpp(61): warning : This version of JUCE does not use the splash screen, the flag JUCE_DISPLAY_SPLASH_SCREEN is ignored [D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow.vcxproj]
+  juce_events.cpp
+  juce_core.cpp
+  juce_core_CompilationTime.cpp
+  juce_data_structures.cpp
+  juce_audio_processors_headless.cpp
+  juce_audio_processors_headless_ara.cpp
+  juce_audio_processors_headless_lv2_libs.cpp
+  juce_audio_basics.cpp
+  juce_audio_utils.cpp
+  juce_audio_formats.cpp
+  juce_audio_devices.cpp
+  juce_dsp.cpp
+  juce_graphics_Sheenbidi.c
+  Undertow.vcxproj -> D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow_artefacts\Release\Undertow_SharedCode.lib
+  Building Custom Rule D:/a/grvty-plugins/grvty-plugins/Undertow/CMakeLists.txt
+  juce_audio_plugin_client_AAX.cpp
+  juce_audio_plugin_client_AAX_utils.cpp
+  juce_audio_plugin_client_ARA.cpp
+  juce_audio_plugin_client_LV2.cpp
+  juce_audio_plugin_client_Unity.cpp
+  juce_audio_plugin_client_Standalone.cpp
+  juce_audio_plugin_client_VST2.cpp
+  juce_audio_plugin_client_VST3.cpp
+     Creating library D:/a/grvty-plugins/grvty-plugins/build-windows/Undertow/Undertow_artefacts/Release/VST3/Undertow.lib and object D:/a/grvty-plugins/grvty-plugins/build-windows/Undertow/Undertow_artefacts/Release/VST3/Undertow.exp
+  Generating code
+  Finished generating code
+  Undertow_VST3.vcxproj -> D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow_artefacts\Release\VST3\Undertow.vst3\Contents\x86_64-win\Undertow.vst3
+  removing moduleinfo.json
+  creating D:/a/grvty-plugins/grvty-plugins/build-windows/Undertow/Undertow_artefacts/Release/VST3/Undertow.vst3
+PLUGINVAL Undertow Windows x64 : SUCCESS
+Command line defined: "PRODUCT=Undertow"
+Command line defined: "DESCRIPTION=synthé FM avec séquenceur pour boucles techno hypnotiques"
+Command line defined: "VERSION=1.0.6"
+Command line defined: "PLUGIN_DIR=D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\Undertow_artefacts\Release\VST3\Undertow.vst3"
+Command line defined: "DOCS_DIR=D:\a\grvty-plugins\grvty-plugins\build-windows\Undertow\docs"
+Command line defined: "OUTFILE=D:\a\grvty-plugins\grvty-plugins\dist\Undertow-1.0.6-Windows-setup.exe"
+Processing config: C:\Program Files (x86)\NSIS\nsisconf.nsh
+Processing script file: "D:\a\grvty-plugins\grvty-plugins\packaging\windows\installer.nsi" (UTF8)
+
+Processed 1 file, writing output (x86-unicode):
+
+Output: "D:\a\grvty-plugins\grvty-plugins\dist\Undertow-1.0.6-Windows-setup.exe"
+Install: 4 pages (256 bytes), 1 section (2072 bytes), 436 instructions (12208 bytes), 198 strings (78640 bytes), 1 language table (266 bytes).
+Uninstall: 2 pages (192 bytes), 1 section (2072 bytes), 54 instructions (1512 bytes), 89 strings (2936 bytes), 1 language table (250 bytes).
+Datablock optimizer saved 94035 bytes (~1.3%).
+
+Using lzma (compress whole) compression.
+
+EXE header size:               52224 / 38912 bytes
+Install code:                          (93906 bytes)
+Install data:                          (7010642 bytes)
+Uninstall code+data:                   (21326 bytes)
+Compressed data:             2389740 / 7125874 bytes
+CRC (0x46B988E4):                  4 / 4 bytes
+
+Total size:                  2441968 / 7164790 bytes (34.0%)
+0d4305cd89b1f046d8b043e9d6a44082d830ffb2631f88854e043c78e4721cdf *Undertow-1.0.6-Windows-setup.exe
+0073c3c32c3b04d10bbddd7889060800547aa078062eb6af77d312242c6e8522 *Undertow-1.0.6-source.zip
+=== TERMINE : D:/a/grvty-plugins/grvty-plugins/dist/Undertow-1.0.6-Windows-setup.exe ===

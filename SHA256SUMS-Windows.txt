@@ -1,0 +1,8 @@
+baf79782a7867afeb76e337988c3d2bacdea0f1ab7132eb4c3a3b621d98ea10b *Confluence-1.0.4-Windows-setup.exe
+99c85c530f9b0a6616053b2c61693919ab6b4c76c82b8fc0f6c9db9e232162c6 *Confluence-1.0.4-source.zip
+d874bf8c37463cf9e55f34f6a51ec80a41fa7d8df5c878dc1568ab0b9fb20eb6 *Ebb-1.0.3-Windows-setup.exe
+d76d932981e91e91998fc2dfadca713c70d6c52b68daa38fb3e9b94311e73d7e *Ebb-1.0.3-source.zip
+7e9dd04e4140c84aab0d092e5d72be6f396eac70dac1c027b4099eec3ceb2afb *Flow-Filter-1.0.4-Windows-setup.exe
+4274c6df40b4cb3cb263686969b3e8e2649c546dc43583e90f646ebfc1c7e304 *Flow-Filter-1.0.4-source.zip
+0d4305cd89b1f046d8b043e9d6a44082d830ffb2631f88854e043c78e4721cdf *Undertow-1.0.6-Windows-setup.exe
+0073c3c32c3b04d10bbddd7889060800547aa078062eb6af77d312242c6e8522 *Undertow-1.0.6-source.zip
