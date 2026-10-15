@@ -1,0 +1,56 @@
+@PRODUCT_UPPER@ @VERSION@ — @DESCRIPTION@ (plugin VST® 3, Windows 64 bits)
+Une création du label et collectif GRVTY Records, développée par Jasperr.
+© 2026 GRVTY Records — logiciel libre sous licence GNU AGPL v3 (voir LICENSE et NOTICE)
+VST is a registered trademark of Steinberg Media Technologies GmbH.
+
+
+INSTALLER
+---------
+1. Ferme Ableton Live, puis double-clique sur @SETUP@.
+2. Si Windows affiche « Windows a protégé votre ordinateur » (installeur non signé) :
+   clique sur « Informations complémentaires », vérifie que le fichier vient bien de GRVTY Records, puis
+   « Exécuter quand même ». Ne désactive jamais l'antivirus pour installer un plugin.
+3. Le plugin est copié dans C:\Program Files\Common Files\VST3\@PRODUCT@.vst3 (droits administrateur demandés).
+4. Dans Ableton Live : Options > Settings (Préférences dans Live 11) > Plug-Ins, active « Use VST3 Plug-in
+   System Folders », puis clique sur Rescan. @PRODUCT@ apparaît dans Plug-Ins > VST3 > GRVTY Records.
+
+Configuration : Windows 10 ou 11 en 64 bits, Ableton Live 10.1 ou plus récent (ou un autre hôte VST 3).
+Vérifier le téléchargement : l'empreinte SHA-256 de l'installeur (PowerShell : Get-FileHash @SETUP@)
+doit être identique à celle de SHA256SUMS-Windows.txt.
+
+
+DÉSINSTALLER
+------------
+Paramètres > Applications > Applications installées > @PRODUCT@ (VST3) > Désinstaller.
+Tes presets personnels restent dans Documents\GRVTY Records\@PRODUCT@ (supprime-les si tu veux).
+
+
+LICENCE ET GARANTIE
+-------------------
+@PRODUCT@ est un logiciel libre : tu peux l'utiliser, l'étudier, le modifier et le redistribuer selon les termes de
+la GNU Affero General Public License (fichier LICENSE) : version 3 ou (à ton choix) toute version ultérieure pour
+le code de @PRODUCT@ ; version 3 pour le plugin compilé, qui inclut JUCE.
+Une version modifiée que tu distribues reste sous cette licence, avec son code source, et porte un autre nom
+(termes additionnels : fichier NOTICE). Les noms « GRVTY Records », « Jasperr », « @PRODUCT@ » et les logos ne
+sont pas couverts par la licence.
+
+@PRODUCT@ est fourni SANS AUCUNE GARANTIE, dans les limites permises par la loi : ni de qualité marchande,
+ni d'adéquation à un usage particulier. Garde des sauvegardes de tes projets.
+
+La musique que tu crées avec @PRODUCT@ t'appartient entièrement : aucune licence, aucun crédit ni aucune
+redevance ne sont demandés pour tes morceaux, y compris pour un usage commercial.
+
+Le code source exact de cette version est publié avec elle (@SOURCEZIP@), ainsi que celui de JUCE
+(JUCE-8.0.12-source.zip). Composants tiers et leurs licences : THIRD-PARTY-NOTICES.md.
+
+
+CONFIDENTIALITÉ
+---------------
+@PRODUCT@ ne collecte aucune donnée, n'affiche aucune publicité, ne se met pas à jour tout seul et ne se connecte
+jamais à Internet (le bouton LICENCE du panneau ⓘ ouvre simplement ton navigateur).
+
+
+MARQUES
+-------
+VST est une marque déposée de Steinberg Media Technologies GmbH. Ableton et Live sont des marques d'Ableton AG.
+Windows est une marque de Microsoft Corporation. @PRODUCT@ n'est ni affilié à ces sociétés, ni approuvé par elles.

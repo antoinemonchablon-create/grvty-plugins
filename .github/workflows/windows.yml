@@ -1,0 +1,80 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Copyright (C) 2026 GRVTY Records — voir les fichiers LICENSE et NOTICE
+#
+# Fabrique les installeurs Windows (.exe) des 4 plugins GRVTY Records sur les machines Windows gratuites de GitHub :
+# compilation Visual Studio 64 bits, pluginval strict niveau 10, installeur NSIS, archive du code source.
+# Les fichiers sont joints à chaque exécution (onglet Actions) et copiés sur la branche « windows-builds ».
+
+name: Windows
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: windows
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: ${{ matrix.plugin }}
+    runs-on: windows-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        plugin: [FlowFilter, Undertow, Confluence, Ebb]
+    steps:
+      - uses: actions/checkout@v4
+      - name: NSIS
+        shell: bash
+        run: |
+          if ! command -v makensis >/dev/null && [ ! -x "/c/Program Files (x86)/NSIS/makensis.exe" ]; then
+            choco install nsis -y --no-progress
+          fi
+      - name: Compilation, pluginval et installeur
+        shell: bash
+        run: bash packaging/windows/build-windows.sh ${{ matrix.plugin }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows-${{ matrix.plugin }}
+          path: dist/*
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: journal-${{ matrix.plugin }}
+          path: pluginval-windows-*.log
+          if-no-files-found: ignore
+
+  publish:
+    name: Branche windows-builds
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: windows-*
+          merge-multiple: true
+          path: out
+      - name: Copie sur la branche windows-builds
+        env:
+          REPO: ${{ github.repository }}
+          TOKEN: ${{ github.token }}
+          SHA: ${{ github.sha }}
+        run: |
+          cd out
+          cat SHA256SUMS-*.txt > ../sums.txt && rm SHA256SUMS-*.txt && mv ../sums.txt SHA256SUMS-Windows.txt
+          cat SHA256SUMS-Windows.txt
+          ls -la
+          git init -q -b windows-builds
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Installeurs Windows (commit $SHA)"
+          git push -f "https://x-access-token:${TOKEN}@github.com/${REPO}.git" windows-builds

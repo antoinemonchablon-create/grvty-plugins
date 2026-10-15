@@ -1,0 +1,14 @@
+# Compilations
+build/
+build-*/
+dist/
+tools/
+# Journaux et fichiers de travail
+*.log
+test-results.md
+.livraison/
+.DS_Store
+# Notes privées et raccourcis propres au Mac
+prive/
+*.terminal
+rendus/**/*.wav

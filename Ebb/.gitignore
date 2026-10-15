@@ -1,0 +1,7 @@
+build/
+build-linux/
+tools/
+*.log
+.build_number
+.livraison/
+test-results.md

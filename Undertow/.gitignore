@@ -1,0 +1,5 @@
+build/
+build-linux/
+tools/
+*.log
+.build_number

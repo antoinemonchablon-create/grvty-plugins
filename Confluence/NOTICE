@@ -1,0 +1,30 @@
+Confluence
+Une création du label et collectif GRVTY Records — développement : Jasperr
+Copyright (C) 2026 GRVTY Records
+
+Ce programme est un logiciel libre : vous pouvez le redistribuer et/ou le modifier selon les termes de la
+GNU Affero General Public License publiée par la Free Software Foundation, version 3 ou (à votre choix)
+toute version ultérieure. Il est distribué SANS AUCUNE GARANTIE, ni de qualité marchande, ni d'adéquation
+à un usage particulier, dans les limites permises par la loi. Voir le fichier LICENSE.
+
+Le plugin compilé inclut le framework JUCE, distribué sous la GNU AGPL version 3 : l'ensemble compilé est
+donc distribué sous la GNU AGPL version 3. Composants tiers et leurs licences : THIRD-PARTY-NOTICES.md.
+
+TERMES ADDITIONNELS (GNU AGPL v3, article 7)
+Les termes suivants s'ajoutent à la licence, pour le code de Confluence publié sous le nom GRVTY Records
+(droits exercés par son auteur, qui publie sous ce nom, ou par GRVTY Records s'ils lui sont cédés) :
+  c) Une version modifiée que vous distribuez doit porter un autre nom que « Confluence », ne pas se
+     présenter comme la version d'origine ni comme une création de GRVTY Records, et indiquer ses
+     modifications de façon raisonnable.
+  e) La licence n'accorde aucun droit d'utiliser comme marque les noms « GRVTY Records » et « Jasperr »,
+     le nom du plugin ni son logo.
+
+ADDITIONAL TERMS (GNU AGPL v3, section 7), for the Confluence code published under the name GRVTY Records
+(rights exercised by its author, who publishes under that name, or by GRVTY Records if assigned to it):
+  c) A modified version you distribute must use a name other than "Confluence", must not present itself
+     as the original version or as a GRVTY Records creation, and must reasonably mark its changes.
+  e) This License grants no right to use the names "GRVTY Records" and "Jasperr", the plugin's name
+     or its logo as trademarks.
+
+VST est une marque déposée de Steinberg Media Technologies GmbH. Ableton, Live et Push sont des marques
+d'Ableton AG. Confluence n'est affilié à aucune de ces sociétés, ni approuvé par elles.

@@ -1,0 +1,70 @@
+CONFLUENCE @VERSION@ — générateur d'accords pour Ableton Live (plugin VST® 3, Windows 64 bits)
+Une création du label et collectif GRVTY Records, développée par Jasperr.
+© 2026 GRVTY Records — logiciel libre sous licence GNU AGPL v3 (voir LICENSE et NOTICE)
+VST is a registered trademark of Steinberg Media Technologies GmbH.
+
+Une note jouée devient un accord complet, dans la gamme choisie, envoyé en MIDI à ton synthé.
+Page officielle et code source : @SOURCE_URL@
+
+
+INSTALLER
+---------
+1. Ferme Ableton Live, puis double-clique sur Confluence-v@VERSION@-Windows-setup.exe.
+2. Si Windows affiche « Windows a protégé votre ordinateur » (installeur non signé, voir BUILD-INFO.txt) :
+   clique sur « Informations complémentaires », vérifie que le fichier est bien celui de la page officielle, puis
+   « Exécuter quand même ». Ne désactive jamais l'antivirus pour installer un plugin.
+3. Le plugin est copié dans C:\Program Files\Common Files\VST3\Confluence.vst3 (droits administrateur demandés).
+4. Dans Ableton Live : Options > Settings (Préférences dans Live 11) > Plug-Ins, active « Use VST3 Plug-in System Folders », puis clique sur
+   Rescan. Confluence apparaît dans le navigateur, dans Plug-Ins > VST3 > GRVTY Records.
+5. Branchement vers ton synthé : voir ROUTAGE-ABLETON.md (2 pistes, « MIDI From »).
+
+Configuration : Windows 10 ou 11 en 64 bits, Ableton Live 10.1 ou plus récent (ou un autre hôte VST 3 capable de
+router la sortie MIDI d'un plugin vers une autre piste).
+
+Vérifier le téléchargement : l'empreinte SHA-256 de l'installeur doit être identique à celle publiée dans
+SHA256SUMS.txt (PowerShell : Get-FileHash Confluence-v@VERSION@-Windows-setup.exe). Télécharge Confluence uniquement
+depuis la page officielle.
+
+
+DÉSINSTALLER
+------------
+Paramètres > Applications > Applications installées > Confluence (VST3) > Désinstaller.
+Tes presets personnels restent dans Documents\GRVTY Records\Confluence\Presets (supprime-les si tu veux).
+
+
+LICENCE ET GARANTIE
+-------------------
+Confluence est un logiciel libre : tu peux l'utiliser, l'étudier, le modifier et le redistribuer selon les termes de la
+GNU Affero General Public License (fichier LICENSE) : version 3 ou (à ton choix) toute version ultérieure pour le
+code de Confluence ; version 3 pour le plugin compilé, qui inclut JUCE.
+Une version modifiée que tu distribues reste sous cette licence, avec son code source, et porte un autre nom
+(termes additionnels : fichier NOTICE).
+
+Confluence est fourni SANS AUCUNE GARANTIE, dans les limites permises par la loi : ni de qualité marchande,
+ni d'adéquation à un usage particulier. Garde des sauvegardes de tes projets.
+
+La musique que tu crées avec Confluence t'appartient entièrement : aucune licence, aucun crédit ni aucune
+redevance ne sont demandés pour tes morceaux, y compris pour un usage commercial.
+
+Le code source exact de cette version est publié avec elle (Confluence-v@VERSION@-source.zip), ainsi que celui de
+JUCE (JUCE-8.0.12-source.zip). Composants tiers et leurs licences : THIRD-PARTY-NOTICES.md.
+
+
+CONFIDENTIALITÉ
+---------------
+Confluence ne collecte aucune donnée, n'affiche aucune publicité, ne se met pas à jour tout seul et ne se connecte
+jamais à Internet (les boutons du panneau « À propos » ouvrent simplement ton navigateur). Il écrit seulement
+tes presets (dossier ci-dessus), les fichiers MIDI que tu exportes (Musique\Confluence) et un fichier MIDI
+temporaire quand tu glisses la progression vers Ableton.
+
+
+MARQUES
+-------
+VST est une marque déposée de Steinberg Media Technologies GmbH. Ableton, Live et Push sont des marques d'Ableton AG.
+Windows est une marque de Microsoft Corporation. Confluence n'est ni affilié à ces sociétés, ni approuvé par elles.
+
+
+SIGNALER UN PROBLÈME
+--------------------
+Bug ou question : page officielle ci-dessus. Faille de sécurité : signalement privé, voir SECURITY.md dans le
+code source (onglet Security > Report a vulnerability du dépôt).

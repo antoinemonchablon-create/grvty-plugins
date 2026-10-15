@@ -1,0 +1,71 @@
+CONFLUENCE @VERSION@ — générateur d'accords pour Ableton Live (plugin VST® 3, macOS)
+Une création du label et collectif GRVTY Records, développée par Jasperr.
+© 2026 GRVTY Records — logiciel libre sous licence GNU AGPL v3 (voir LICENSE et NOTICE)
+VST is a registered trademark of Steinberg Media Technologies GmbH.
+
+Une note jouée devient un accord complet, dans la gamme choisie, envoyé en MIDI à ton synthé.
+Page officielle et code source : @SOURCE_URL@
+
+
+INSTALLER
+---------
+1. Double-clique sur le fichier .pkg et suis l'installeur.
+   Le plugin est copié dans /Library/Audio/Plug-Ins/VST3/Confluence.vst3 (mot de passe administrateur demandé).
+2. Si macOS indique qu'il ne peut pas vérifier le développeur (installeur non notarisé, voir BUILD-INFO.txt) :
+   - macOS 13 ou plus récent : Réglages Système > Confidentialité et sécurité, bouton « Ouvrir quand même » ;
+   - macOS 11 ou 12 : Préférences Système > Sécurité et confidentialité > Général, bouton « Ouvrir quand même ».
+   Ne désactive jamais Gatekeeper et ne lance pas de commande Terminal trouvée sur Internet pour installer un plugin.
+3. Dans Ableton Live : Réglages > Plug-Ins, active « Use VST3 Plug-in System Folders », puis clique sur Rescan.
+   Confluence apparaît dans le navigateur, dans Plug-Ins > VST3 > GRVTY Records.
+4. Branchement vers ton synthé : voir ROUTAGE-ABLETON.md (2 pistes, « MIDI From »).
+
+Configuration : macOS 11 ou plus récent, Mac Apple Silicon ou Intel, Ableton Live 10.1 ou plus récent
+(ou un autre hôte VST 3 capable de router la sortie MIDI d'un plugin vers une autre piste).
+
+Vérifier le téléchargement : l'empreinte SHA-256 du .zip doit être identique à celle publiée dans SHA256SUMS.txt
+(Terminal : shasum -a 256 Confluence-v@VERSION@-macOS.zip). Télécharge Confluence uniquement depuis la page officielle.
+
+
+DÉSINSTALLER
+------------
+Supprime le dossier /Library/Audio/Plug-Ins/VST3/Confluence.vst3.
+Tes presets personnels sont dans ~/Library/Audio/Presets/GRVTY Records/Confluence (dans le Finder : menu Aller
+en maintenant la touche Option, puis Bibliothèque). Supprime-les si tu veux.
+
+
+LICENCE ET GARANTIE
+-------------------
+Confluence est un logiciel libre : tu peux l'utiliser, l'étudier, le modifier et le redistribuer selon les termes de la
+GNU Affero General Public License (fichier LICENSE) : version 3 ou (à ton choix) toute version ultérieure pour le
+code de Confluence ; version 3 pour le plugin compilé, qui inclut JUCE.
+Une version modifiée que tu distribues reste sous cette licence, avec son code source, et porte un autre nom
+(termes additionnels : fichier NOTICE).
+
+Confluence est fourni SANS AUCUNE GARANTIE, dans les limites permises par la loi : ni de qualité marchande,
+ni d'adéquation à un usage particulier. Garde des sauvegardes de tes projets.
+
+La musique que tu crées avec Confluence t'appartient entièrement : aucune licence, aucun crédit ni aucune
+redevance ne sont demandés pour tes morceaux, y compris pour un usage commercial.
+
+Le code source exact de cette version est publié avec elle (Confluence-v@VERSION@-source.zip), ainsi que celui de
+JUCE (JUCE-8.0.12-source.zip). Composants tiers et leurs licences : THIRD-PARTY-NOTICES.md.
+
+
+CONFIDENTIALITÉ
+---------------
+Confluence ne collecte aucune donnée, n'affiche aucune publicité, ne se met pas à jour tout seul et ne se connecte
+jamais à Internet (les boutons du panneau « À propos » ouvrent simplement ton navigateur). Il écrit seulement
+tes presets (dossier ci-dessus), les fichiers MIDI que tu exportes (Musique / Confluence) et un fichier MIDI
+temporaire quand tu glisses la progression vers Ableton.
+
+
+MARQUES
+-------
+VST est une marque déposée de Steinberg Media Technologies GmbH. Ableton, Live et Push sont des marques d'Ableton AG.
+Confluence n'est ni affilié à ces sociétés, ni approuvé par elles. Mac et macOS sont des marques d'Apple Inc.
+
+
+SIGNALER UN PROBLÈME
+--------------------
+Bug ou question : page officielle ci-dessus. Faille de sécurité : signalement privé, voir SECURITY.md dans le
+code source (onglet Security > Report a vulnerability du dépôt).
