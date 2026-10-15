@@ -38,21 +38,23 @@ jobs:
           fi
       - name: Compilation, pluginval et installeur
         shell: bash
-        run: bash packaging/windows/build-windows.sh ${{ matrix.plugin }}
-      - uses: actions/upload-artifact@v4
-        with:
-          name: windows-${{ matrix.plugin }}
-          path: dist/*
+        run: |
+          mkdir -p dist
+          bash packaging/windows/build-windows.sh ${{ matrix.plugin }} 2>&1 | tee "dist/journal-${{ matrix.plugin }}.txt"
+      - name: Journal pluginval
+        if: always()
+        shell: bash
+        run: cp pluginval-windows-*.log dist/ 2>/dev/null || true
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: journal-${{ matrix.plugin }}
-          path: pluginval-windows-*.log
-          if-no-files-found: ignore
+          name: windows-${{ matrix.plugin }}
+          path: dist/*
 
   publish:
     name: Branche windows-builds
     needs: build
+    if: always()
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -69,8 +71,10 @@ jobs:
           SHA: ${{ github.sha }}
         run: |
           cd out
-          cat SHA256SUMS-*.txt > ../sums.txt && rm SHA256SUMS-*.txt && mv ../sums.txt SHA256SUMS-Windows.txt
-          cat SHA256SUMS-Windows.txt
+          if ls SHA256SUMS-*.txt >/dev/null 2>&1; then
+            cat SHA256SUMS-*.txt > ../sums.txt && rm SHA256SUMS-*.txt && mv ../sums.txt SHA256SUMS-Windows.txt
+            cat SHA256SUMS-Windows.txt
+          fi
           ls -la
           git init -q -b windows-builds
           git config user.name "github-actions[bot]"
